@@ -32,7 +32,7 @@ class Photographer(models.Model):
     info = models.ForeignKey(User , on_delete=models.CASCADE)
     skills = models.ManyToManyField(Skills)
     description = models.TextField()
-    image = models.ImageField(upload_to='photographer', default='photographer.png')
+    image = models.ImageField(upload_to='photographer', default='photographer.jpg')
     status = models.BooleanField(default=False)
     updated_datetime = models.DateTimeField(auto_now=True)
 
